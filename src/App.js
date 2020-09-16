@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
+import axios from 'axios';
+import RandomJoke from './RandomJoke';
+import Categories from './Categories';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+  // state = { joke: ""};
+
+  // onButtonClick = async () => {
+  //   console.log("in");
+  //   const response = await axios.get('https://api.chucknorris.io/jokes/random');
+  //   console.log(response);
+  //   this.setState({joke: (response).data.value});
+  // }
+
+  render() {
+    return (
+      <div className="App">
+        <RandomJoke></RandomJoke>
+        <Categories></Categories>
+      </div>
+    );
+  }
 }
 
 export default App;
